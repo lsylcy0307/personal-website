@@ -1,14 +1,6 @@
 import React from 'react';
-import ProjectCard from '../components/projectcard';
 import RoundedTable from '../components/table';
 
-const exampleProject = {
-    id: '1',
-    title: 'Example Project',
-    description: 'This is an example project.',
-    imageUrl: 'https://example.com/image.jpg',
-    createdAt: 'October 1, 2023',
-  };
 
 function ProjectsPage() {
     return (
