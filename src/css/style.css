@@ -1,0 +1,52 @@
+
+.rounded-table-container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+  }
+  
+  .rounded-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: white;
+  }
+  
+  .rounded-table th,
+  .rounded-table td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .rounded-table th {
+    background-color: #f2f2f2;
+  }
+
+  .galleryContainer {
+    width: 100%;
+    display: 'flex';
+    flex-wrap: 'wrap';
+    position: relative;
+    height: 500px;
+    margin-bottom: 2rem;
+  }
+
+  .galleryImage{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  .profile{
+    width: 100%;
+    height: 500px;
+  }
+
+  .custom-icon {
+    color: white;
+  }
+  
