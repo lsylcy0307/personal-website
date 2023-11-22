@@ -37,7 +37,7 @@ interface DraggablePhotoProps {
       setPosition({ x: randomX, y: randomY });
     }, []); // 
     
-      const handleMouseMove = (e) => {
+      const handleMouseMove = (e: any) => {
         const newPosition = {
             x: position.x + e.movementX,
             y: position.y + e.movementY,
