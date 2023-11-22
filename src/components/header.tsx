@@ -17,7 +17,7 @@ function Header() {
   }
 
   async function toGallery() {
-    navigate('/gallery');
+    navigate('/about');
   }
 
   async function toProjects() {
