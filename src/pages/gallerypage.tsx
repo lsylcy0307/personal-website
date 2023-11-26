@@ -39,7 +39,7 @@ const GalleryPage = () => {
               style={{ width: '300px', height: '320px', borderRadius: '20%'}}
             />
             <h2>Yeon Lee</h2>
-            <p>- Freshmen studying computer science and finance at UPenn.</p>
+            <p>- Freshman studying computer science and finance at UPenn.</p>
             <p>- Love building and solving.</p>
             <p>- Passion for food and arts.</p>
             <ArrowCircleDownIcon onClick={toggleUpperContent}/>
