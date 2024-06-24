@@ -3,6 +3,7 @@ import { TextField, Link, Grid } from '@mui/material';
 import { useNavigate, Link as RouterLink } from 'react-router-dom';
 import React from 'react';
 import HomeIcon from '@mui/icons-material/Home';
+import SpokeIcon from '@mui/icons-material/Spoke';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import EmojiObjectsOutlinedIcon from '@mui/icons-material/EmojiObjectsOutlined';
 import PendingOutlinedIcon from '@mui/icons-material/PendingOutlined';
@@ -18,6 +19,10 @@ function Header() {
 
   async function toGallery() {
     navigate('/about');
+  }
+
+  async function toExperience() {
+    navigate('/experiences');
   }
 
   async function toProjects() {
@@ -47,9 +52,9 @@ function Header() {
             color: 'white', 
             fontWeight: 'bold',
         }}
-        onClick={() => toHome()}
+        onClick={() => toGallery()}
         >
-        <HomeIcon className="custom-icon" />
+        <PersonOutlineIcon className="custom-icon" />
         </div>
         <div
         style={{
@@ -64,9 +69,9 @@ function Header() {
             borderBottomLeftRadius:'20%',
             borderBottomRightRadius:'20%',
         }}
-        onClick={() => toGallery()}
+        onClick={() => toExperience()}
         >
-        <PersonOutlineIcon className="custom-icon" />
+        <SpokeIcon className="custom-icon" />
         </div>
         <div
         style={{

@@ -24,9 +24,9 @@ const RoundedTable = () => {
             <td>Working in a team of developers to build software solutions for non proits.</td>
           </tr>
           <tr>
-            <td>ModLab</td>
-            <td>Undergraduate Research Assistant</td>
-            <td>Working under Professor Yim to develop a python simulation of swarm robot behaviors.</td>
+            <td>Computational Social Science (CSS) Lab</td>
+            <td>Research Assistant</td>
+            <td>Working under Dr. Homa Hosseinmardi on a project focused on consumption, production, and recommendation algorithms on YouTube.</td>
           </tr>
           {/* Add more rows as needed */}
         </tbody>

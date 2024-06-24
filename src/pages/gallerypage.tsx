@@ -11,6 +11,8 @@ const photos: { src: string; alt: string }[] = [
     { src: 'https://picsum.photos/3000/2000', alt: 'Photo 2' },
 ];
 
+const str = '</> with ♥'
+
 const GalleryPage = () => {
   const [isUpperVisible, setIsUpperVisible] = useState(true);
 
@@ -21,7 +23,7 @@ const GalleryPage = () => {
   return (
     <div
       style={{
-        marginTop: '2rem'
+        marginTop: '5rem'
       }}>
       <div
           style={{
@@ -31,21 +33,20 @@ const GalleryPage = () => {
           }}
       >
         {isUpperVisible && (
-          <div className="upper-content" style={{alignItems: 'center',}}>
-            <h1>About</h1>
-            <img
-              src={profilePic}
-              alt="About Us"
-              style={{ width: '300px', height: '320px', borderRadius: '20%'}}
-            />
-            <h2>Yeon Lee</h2>
-            <p>- Freshman studying computer science and finance at UPenn.</p>
-            <p>- Love building and solving.</p>
-            <p>- Passion for food and arts.</p>
-            <ArrowCircleDownIcon onClick={toggleUpperContent}/>
+          <div className="upper-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+          <img
+            src={profilePic}
+            alt="About Us"
+            style={{ width: '300px', height: '320px', borderRadius: '20%' }}
+          />
+          <div style={{ maxWidth: '350px', marginTop: '1rem' }}>
+            <h2>Su Yeon Lee</h2>
+            <p>I am passionate about finding and solving problems with technology.</p>
+            <p>I am studying Computer Science in Engineering & Economics in Wharton (Jerome Fisher Program in Management and Technology) at UPenn.</p>
           </div>
+          {/* <ArrowCircleDownIcon onClick={toggleUpperContent}/> */}
+        </div>
         )}
-
         {!isUpperVisible && (
           <div className="lower-content">
             <ArrowCircleUpIcon onClick={toggleUpperContent}/>
@@ -59,6 +60,9 @@ const GalleryPage = () => {
           </div>
         )}
       </div>
+      <footer style={{ textAlign: 'center', marginTop: '2rem', color: '#666' }}>
+        <p>{str} by Su Yeon Lee</p>
+      </footer>
     </div>
   );
 };
