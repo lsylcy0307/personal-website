@@ -5,7 +5,15 @@ import lippinbot from '../images/lippinbot.png';
 import promptle from '../images/promptle.png';
 import thinkshare from '../images/thinkshare.png';
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  link: string;
+  image: string;
+}
+
+const projects: Project[] = [
   {
     title: 'Promptle Game',
     description: 'A web-based game where for every AI generated image, player should guess as many keywords that were used to created the prompt.',
@@ -48,9 +56,9 @@ Modal.setAppElement('#root'); // Set the root element for accessibility
 
 function ProjectsPage() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  function openModal(project) {
+  function openModal(project: Project) {
     setSelectedProject(project);
     setModalIsOpen(true);
   }
@@ -68,7 +76,7 @@ function ProjectsPage() {
             <div
               key={index}
               className="project-card"
-              // onClick={() => openModal(project)}
+              onClick={() => openModal(project)}
             >
               <img src={project.image} alt={project.title} className="project-image" />
               <h2>{project.title}</h2>
@@ -82,7 +90,7 @@ function ProjectsPage() {
          ))} 
       </div>
 
-      {/* <Modal
+      <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
@@ -91,11 +99,11 @@ function ProjectsPage() {
         {selectedProject && (
           <div>
             <h2>{selectedProject.title}</h2>
-            <p>{selectedProject.link}</p>
+            <p>{selectedProject.description}</p>
             <button onClick={closeModal} className="close-button">Close</button>
           </div>
         )}
-      </Modal> */}
+      </Modal>
     </div>
   );
 }
