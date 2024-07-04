@@ -1,6 +1,4 @@
-import { Typography, Button } from '@mui/material';
-import { TextField, Link, Grid } from '@mui/material';
-import { useNavigate, Link as RouterLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import React from 'react';
 import HomeIcon from '@mui/icons-material/Home';
 import SpokeIcon from '@mui/icons-material/Spoke';
@@ -8,7 +6,6 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import EmojiObjectsOutlinedIcon from '@mui/icons-material/EmojiObjectsOutlined';
 import PendingOutlinedIcon from '@mui/icons-material/PendingOutlined';
 import '../css/style.css';
-
 
 function Header() {
   const navigate = useNavigate();
@@ -30,81 +27,24 @@ function Header() {
   }
 
   return (
-    <div
-      className="flex w-full"
-      style={{
-        marginBottom: '1rem',
-        marginLeft:'2rem',
-        marginRight:'1rem',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-      }}
-    >
-        <div
-        style={{
-            width: '20%', 
-            height: '100px', 
-            backgroundColor: 'green',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            color: 'white', 
-            fontWeight: 'bold',
-        }}
-        onClick={() => toGallery()}
-        >
+    <div className="header-container">
+      <div className="header-title">
+        <h3>
+          <a href='/about'>Su Yeon Lee</a>
+        </h3>
+      </div>
+      <div className="colored-div green-div" onClick={toGallery}>
         <PersonOutlineIcon className="custom-icon" />
-        </div>
-        <div
-        style={{
-            width: '10%', 
-            height: '100px', 
-            backgroundColor: 'orange',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            color: 'white', 
-            fontWeight: 'bold',
-            borderBottomLeftRadius:'20%',
-            borderBottomRightRadius:'20%',
-        }}
-        onClick={() => toExperience()}
-        >
+      </div>
+      <div className="colored-div orange-div" onClick={toExperience}>
         <SpokeIcon className="custom-icon" />
-        </div>
-        <div
-        style={{
-            width: '10%', 
-            height: '100px', 
-            backgroundColor: 'red',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            color: 'white', 
-            fontWeight: 'bold',
-            borderBottomLeftRadius:'20%',
-            borderBottomRightRadius:'20%',
-        }}
-        onClick={() => toProjects()}
-        >
+      </div>
+      <div className="colored-div red-div" onClick={toProjects}>
         <EmojiObjectsOutlinedIcon className="custom-icon" />
-        </div>
-        <div
-        style={{
-            width: '20%', 
-            height: '100px', 
-            backgroundColor: 'blue',
-            opacity: '70%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            color: 'white', 
-            fontWeight: 'bold',
-        }}
-        >
+      </div>
+      <div className="colored-div blue-div">
         <PendingOutlinedIcon className="custom-icon" />
-        </div>
+      </div>
     </div>
   );
 }

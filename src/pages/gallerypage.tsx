@@ -11,8 +11,6 @@ const photos: { src: string; alt: string }[] = [
     { src: 'https://picsum.photos/3000/2000', alt: 'Photo 2' },
 ];
 
-const str = '</> with ♥'
-
 const GalleryPage = () => {
   const [isUpperVisible, setIsUpperVisible] = useState(true);
 
@@ -60,9 +58,6 @@ const GalleryPage = () => {
           </div>
         )}
       </div>
-      <footer style={{ textAlign: 'center', marginTop: '2rem', color: '#666' }}>
-        <p>{str} by Su Yeon Lee</p>
-      </footer>
     </div>
   );
 };

@@ -76,7 +76,7 @@ function ProjectsPage() {
             <div
               key={index}
               className="project-card"
-              onClick={() => openModal(project)}
+              // onClick={() => openModal(project)}
             >
               <img src={project.image} alt={project.title} className="project-image" />
               <h2>{project.title}</h2>
