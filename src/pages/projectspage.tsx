@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import Modal from 'react-modal';
 import '../css/ProjectsPage.css';
 import lippinbot from '../images/lippinbot.png';
@@ -11,7 +11,12 @@ interface Project {
   tags: string[];
   link: string;
   image: string;
+  component: React.LazyExoticComponent<React.ComponentType<any>>;
 }
+
+const PromptlePage = lazy(() => import('./projects/promptleProject'));
+const LippinbotPage = lazy(() => import('./projects/lippinbotProject'));
+const ThinksharePage = lazy(() => import('./projects/thinkshareProject'));
 
 const projects: Project[] = [
   {
@@ -19,23 +24,25 @@ const projects: Project[] = [
     description: 'A web-based game where for every AI generated image, player should guess as many keywords that were used to created the prompt.',
     tags: ['Python', 'JavaScript', 'HTML', 'CSS'],
     link: '',
-    image: promptle
+    image: promptle,
+    component: PromptlePage
   },
   {
     title: 'Lippinbot',
     description:  'First AI powered search engine for the Wharton Lippincott Library to help students efficiently find library resources.',
     tags: ['Selenium', 'JSoup', 'TypeScript' ],
     link: '',
-    image: lippinbot
+    image: lippinbot,
+    component: LippinbotPage
   },
   {
     title: 'ThinkShare Mobile Application',
     description:  'Provides teachers and students with the tool to track and provide feedback on classroom discussions.',
     tags: ['Selenium', 'JSoup', 'TypeScript' ],
     link: '',
-    image: thinkshare
+    image: thinkshare,
+    component: ThinksharePage
   },
-  // Add more projects as needed
 ];
 
 const customStyles = {
@@ -46,8 +53,8 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    maxHeight: '90vh',
-    width: '80vw',
+    maxHeight: '85vh',
+    width: '70vw',
     overflow: 'auto',
   },
 };
@@ -76,7 +83,7 @@ function ProjectsPage() {
             <div
               key={index}
               className="project-card"
-              // onClick={() => openModal(project)}
+              onClick={() => openModal(project)}
             >
               <img src={project.image} alt={project.title} className="project-image" />
               <h2>{project.title}</h2>
@@ -97,11 +104,9 @@ function ProjectsPage() {
         contentLabel="Project Details"
       >
         {selectedProject && (
-          <div>
-            <h2>{selectedProject.title}</h2>
-            <p>{selectedProject.description}</p>
-            <button onClick={closeModal} className="close-button">Close</button>
-          </div>
+          <Suspense fallback={<div>Loading...</div>}>
+            <selectedProject.component />
+          </Suspense>
         )}
       </Modal>
     </div>
