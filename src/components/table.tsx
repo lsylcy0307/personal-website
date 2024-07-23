@@ -14,9 +14,14 @@ const RoundedTable = () => {
         </thead>
         <tbody>
           <tr>
-            <td>Enuma</td>
-            <td>R&D Intern (Prompt Engineering / Competitor Product Research)</td>
-            <td>Developed a reading chatbot and analyzed adaptive learning services in the market.</td>
+            <td>Penn Computational Social Science (CSS) Lab</td>
+            <td>Research Assistant</td>
+            <td>Working under Homa Hosseinmardi, Ph.D. on a project focused on consumption, production, and recommendation algorithms on YouTube.</td>
+          </tr>
+          <tr>
+            <td>Catio</td>
+            <td>Business Development Intern</td>
+            <td>Assisting the CEO to enhance product-market fit, refine the company website, and build GTM strategies.</td>
           </tr>
           <tr>
             <td>Hack4Impact UPenn</td>
@@ -24,9 +29,9 @@ const RoundedTable = () => {
             <td>Working in a team of developers to build software solutions for non proits.</td>
           </tr>
           <tr>
-            <td>Computational Social Science (CSS) Lab</td>
-            <td>Research Assistant</td>
-            <td>Working under Dr. Homa Hosseinmardi on a project focused on consumption, production, and recommendation algorithms on YouTube.</td>
+            <td>Enuma</td>
+            <td>Product Research & Development Intern</td>
+            <td>Worked on a reading chatbot to deliver personalized learning experience. Researched adaptive learning service products in EdTech.</td>
           </tr>
           {/* Add more rows as needed */}
         </tbody>
