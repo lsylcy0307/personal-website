@@ -7,7 +7,7 @@ const RoundedTable = () => {
       <table className="rounded-table">
       <thead>
           <tr>
-            <th>Company/Project</th>
+            <th>Company/Organization</th>
             <th>Role</th>
             <th>Details</th>
           </tr>
@@ -30,8 +30,8 @@ const RoundedTable = () => {
           </tr>
           <tr>
             <td>Enuma</td>
-            <td>Product Research & Development Intern</td>
-            <td>Worked on a reading chatbot to deliver personalized learning experience. Researched adaptive learning service products in EdTech.</td>
+            <td>Software Development Intern</td>
+            <td>Working on building a reading chatbot to enhance personalized learning experience.</td>
           </tr>
           {/* Add more rows as needed */}
         </tbody>

@@ -4,6 +4,8 @@ import '../css/ProjectsPage.css';
 import lippinbot from '../images/lippinbot.png';
 import promptle from '../images/promptle.png';
 import thinkshare from '../images/thinkshare.png';
+import reshwap from '../images/rewshap.png';
+import westpark from '../images/westpark1.png';
 
 interface Project {
   title: string;
@@ -11,14 +13,23 @@ interface Project {
   tags: string[];
   link: string;
   image: string;
-  component: React.LazyExoticComponent<React.ComponentType<any>>;
+  component: React.LazyExoticComponent<React.ComponentType<any>> | null;
 }
 
 const PromptlePage = lazy(() => import('./projects/promptleProject'));
 const LippinbotPage = lazy(() => import('./projects/lippinbotProject'));
 const ThinksharePage = lazy(() => import('./projects/thinkshareProject'));
+const WestParkPage = lazy(() => import('./projects/westparkProject'));
 
 const projects: Project[] = [
+  {
+    title: 'West Park Cultural Center',
+    description:  'Donor and donation management made easier for nonprofits',
+    tags: ['React', 'TypeScript', 'MongoDB' ],
+    link: '',
+    image: westpark,
+    component: WestParkPage
+  },
   {
     title: 'Promptle Game',
     description: 'A web-based game where for every AI generated image, player should guess as many keywords that were used to created the prompt.',
@@ -42,6 +53,14 @@ const projects: Project[] = [
     link: '',
     image: thinkshare,
     component: ThinksharePage
+  },
+  {
+    title: 'Reshwap',
+    description:  'Secondhand item marketplace for my highschool.',
+    tags: ['Flask', 'Python', 'Firebase' ],
+    link: '',
+    image: reshwap,
+    component: null
   },
 ];
 
@@ -97,18 +116,18 @@ function ProjectsPage() {
          ))} 
       </div>
 
+      {selectedProject && selectedProject.component && (
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Project Details"
       >
-        {selectedProject && (
-          <Suspense fallback={<div>Loading...</div>}>
-            <selectedProject.component />
-          </Suspense>
-        )}
+        <Suspense fallback={<div>Loading...</div>}>
+          <selectedProject.component />
+        </Suspense>
       </Modal>
+    )}
     </div>
   );
 }
