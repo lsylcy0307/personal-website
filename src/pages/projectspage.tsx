@@ -6,6 +6,7 @@ import promptle from '../images/promptle.png';
 import thinkshare from '../images/thinkshare.png';
 import reshwap from '../images/rewshap.png';
 import westpark from '../images/westpark1.png';
+import achievenow from '../images/achievenow.png';
 
 interface Project {
   title: string;
@@ -20,6 +21,7 @@ const PromptlePage = lazy(() => import('./projects/promptleProject'));
 const LippinbotPage = lazy(() => import('./projects/lippinbotProject'));
 const ThinksharePage = lazy(() => import('./projects/thinkshareProject'));
 const WestParkPage = lazy(() => import('./projects/westparkProject'));
+const AchieveNowPage = lazy(() => import('./projects/achievenowProject'));
 
 const projects: Project[] = [
   {
@@ -29,6 +31,14 @@ const projects: Project[] = [
     link: '',
     image: westpark,
     component: WestParkPage
+  },
+  {
+    title: 'Achieve Now',
+    description:  'Learning management application used by students, coaches, and parents',
+    tags: ['React', 'TypeScript', 'MongoDB' ],
+    link: '',
+    image: achievenow,
+    component: AchieveNowPage
   },
   {
     title: 'Promptle Game',
@@ -75,6 +85,8 @@ const customStyles = {
     maxHeight: '85vh',
     width: '70vw',
     overflow: 'auto',
+    border: '6px solid rgb(236, 236, 236)', 
+    borderRadius: '8px', 
   },
 };
 

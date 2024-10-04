@@ -16,22 +16,22 @@ const RoundedTable = () => {
           <tr>
             <td>Penn Computational Social Science (CSS) Lab</td>
             <td>Research Assistant</td>
-            <td>Working under Homa Hosseinmardi, Ph.D. on a project focused on consumption, production, and recommendation algorithms on YouTube.</td>
+            <td>Working under Homa Hosseinmardi, Ph.D. on a project focused on media bias on Youtube. Developed a data collection pipeline in Python for collecting metadata from Youtube channels and videos.</td>
           </tr>
           <tr>
             <td>Catio</td>
             <td>Business Development Intern</td>
-            <td>Assisting the CEO to enhance product-market fit, refine the company website, and build GTM strategies.</td>
+            <td>Led the development of the business website end-to-end, expected to significantly improve visitor-to-lead conversion.</td>
           </tr>
           <tr>
             <td>Hack4Impact UPenn</td>
             <td>Full Stack Developer</td>
-            <td>Working in a team of developers to build software solutions for non proits.</td>
+            <td>Working in a team of developers to build software applications to empower non profits.</td>
           </tr>
           <tr>
             <td>Enuma</td>
             <td>Software Development Intern</td>
-            <td>Working on building a reading chatbot to enhance personalized learning experience.</td>
+            <td>Built a reading chatbot to enhance personalized learning experience for global student users.</td>
           </tr>
           {/* Add more rows as needed */}
         </tbody>
